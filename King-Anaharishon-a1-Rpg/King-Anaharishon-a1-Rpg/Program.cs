@@ -11,19 +11,26 @@ int Food;
 
 float Temp;
 
-Console.WriteLine("Use Help! To see a list. And Use Stats! To see all your Stats");
+Console.WriteLine("Use Help! To see a list of Actions. And Use Stats! To see all your Stats");
 Console.WriteLine();
 Console.WriteLine();
 
-Console.WriteLine("It's dark... And cold \nYour Head hurts.... \nDo you Remenber your Name?");
+Console.WriteLine("It's dark... And cold \nYour Head hurts....");
 
+YourName:
+Console.WriteLine("Do you Remenber your Name?");
 Name = Console.ReadLine();
 
-Console.WriteLine("It's " + Name + "? You think to yourself unsure if it's your name or not" );
+
+if (Name.Contains("help") ^ Name.Contains("Help!"))
+    Console.WriteLine("Write Name\n");
+else
+
+    Console.WriteLine("It's " + Name + "? You think to yourself unsure if it's your name or not");
 Console.WriteLine();
 Console.WriteLine();
 Console.WriteLine();
-Console.WriteLine("\"Do you need medical assistants?\" \n You hear to you're right");
+Console.WriteLine("\"Do you need medical assistants?\" \nYou hear to you're right");
 
 OpenEyes:
 Console.WriteLine("Open Your Eyes?");
@@ -43,9 +50,6 @@ Console.WriteLine("To you're left theres a window andd a chair with someone slum
 Console.WriteLine();
 
 Console.Write("What do you Do? ");
-Acttion =  Console.ReadLine();
+Acttion = Console.ReadLine();
 
-if (Acttion.Contains("" +
-    "" +
-    "") )
 

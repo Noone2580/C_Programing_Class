@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\anaha\\source\\repos\\King-Anaharishon-a1-Rpg\\King-Anaharishon-a1-Rpg\\King-Anaharishon-a1-Rpg.csproj": {}
+    "C:\\Users\\anaha\\source\\repos\\C_Programing_Class\\King-Anaharishon-a1-Rpg\\King-Anaharishon-a1-Rpg\\King-Anaharishon-a1-Rpg.csproj": {}
   },
   "projects": {
-    "C:\\Users\\anaha\\source\\repos\\King-Anaharishon-a1-Rpg\\King-Anaharishon-a1-Rpg\\King-Anaharishon-a1-Rpg.csproj": {
+    "C:\\Users\\anaha\\source\\repos\\C_Programing_Class\\King-Anaharishon-a1-Rpg\\King-Anaharishon-a1-Rpg\\King-Anaharishon-a1-Rpg.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\anaha\\source\\repos\\King-Anaharishon-a1-Rpg\\King-Anaharishon-a1-Rpg\\King-Anaharishon-a1-Rpg.csproj",
+        "projectUniqueName": "C:\\Users\\anaha\\source\\repos\\C_Programing_Class\\King-Anaharishon-a1-Rpg\\King-Anaharishon-a1-Rpg\\King-Anaharishon-a1-Rpg.csproj",
         "projectName": "King-Anaharishon-a1-Rpg",
-        "projectPath": "C:\\Users\\anaha\\source\\repos\\King-Anaharishon-a1-Rpg\\King-Anaharishon-a1-Rpg\\King-Anaharishon-a1-Rpg.csproj",
+        "projectPath": "C:\\Users\\anaha\\source\\repos\\C_Programing_Class\\King-Anaharishon-a1-Rpg\\King-Anaharishon-a1-Rpg\\King-Anaharishon-a1-Rpg.csproj",
         "packagesPath": "C:\\Users\\anaha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\anaha\\source\\repos\\King-Anaharishon-a1-Rpg\\King-Anaharishon-a1-Rpg\\obj\\",
+        "outputPath": "C:\\Users\\anaha\\source\\repos\\C_Programing_Class\\King-Anaharishon-a1-Rpg\\King-Anaharishon-a1-Rpg\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
