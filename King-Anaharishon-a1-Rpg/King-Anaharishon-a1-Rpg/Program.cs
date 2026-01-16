@@ -13,26 +13,26 @@ int Food;
 
 float Temp;
 
-Console.WriteLine("Use Help! To see a list of Actions. And Use Stats! To see all your Stats");
+Console.WriteLine("Use Help! To see a list of Actions. And Use Stats! To see all Your Stats");
 Console.WriteLine("\n");
 
 YourName:
 Console.WriteLine("It's dark... And cold \nYour Head hurts....");
-Console.WriteLine("Do you Remenber your Name?");
+Console.WriteLine("Do You Remenber Your Name?");
 Name = Console.ReadLine();
 
 
 if (Name.Contains("Help!"))
 {
-    Console.WriteLine("\nWrite your Name\n");
+    Console.WriteLine("\nWrite Your Name\n");
     goto YourName;
 }
 else
 
 Console.Clear();
-Console.WriteLine("It's " + Name + "? You think to yourself unsure if it's your name or not");
+Console.WriteLine("It's " + Name + "? You think to Yourself unsure if it's Your name or not");
 Console.WriteLine("\n\n");
-Console.WriteLine("\"Do you need medical assistants?\" \nYou hear to you're right");
+Console.WriteLine("\"Do You need medical assistants?\" \nYou hear to You're right");
 
 OpenEyes:
 Console.WriteLine("Open Your Eyes?");
@@ -45,18 +45,18 @@ Console.WriteLine();
 if (Acttion.Contains("y") ^ Acttion.Contains("open"))
 {
     Console.Clear();
-    Console.WriteLine("All you see is white for a few seconds... You see a small red room...\n");
+    Console.WriteLine("All You see is white for a few seconds... Then You see a small red room...\n");
 }
 else
     goto OpenEyes;
 
 
 Room:
-Console.WriteLine("To you're right is some kind of Terminal and what looks like a needle is attached to the right of the it. \nTo you're left theres a window andd a chair with someone slumped over. To the right of the person theres a Valve with a label on it\nIn front of you theres what looks to be a vendding machine and a Door");
+Console.WriteLine("To You're right is some kind of Terminal and what looks like a needle is attached to the right of the it. \nTo You're left theres a window and a chair with someone slumped over. To the right of the Chair theres a Valve with a Label on it\nIn front of You theres what looks to be a Vendding Machine and a Door");
 
 Console.WriteLine();
 
-Console.Write("What do you Do? ");
+Console.Write("What do You Do? ");
 Acttion = Console.ReadLine();
 
 
