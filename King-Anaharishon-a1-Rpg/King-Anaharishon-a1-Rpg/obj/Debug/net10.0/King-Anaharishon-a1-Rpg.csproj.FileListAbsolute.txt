@@ -1,0 +1,14 @@
+C:\Users\anaha\source\repos\King-Anaharishon-a1-Rpg\King-Anaharishon-a1-Rpg\bin\Debug\net10.0\King-Anaharishon-a1-Rpg.exe
+C:\Users\anaha\source\repos\King-Anaharishon-a1-Rpg\King-Anaharishon-a1-Rpg\bin\Debug\net10.0\King-Anaharishon-a1-Rpg.deps.json
+C:\Users\anaha\source\repos\King-Anaharishon-a1-Rpg\King-Anaharishon-a1-Rpg\bin\Debug\net10.0\King-Anaharishon-a1-Rpg.runtimeconfig.json
+C:\Users\anaha\source\repos\King-Anaharishon-a1-Rpg\King-Anaharishon-a1-Rpg\bin\Debug\net10.0\King-Anaharishon-a1-Rpg.dll
+C:\Users\anaha\source\repos\King-Anaharishon-a1-Rpg\King-Anaharishon-a1-Rpg\bin\Debug\net10.0\King-Anaharishon-a1-Rpg.pdb
+C:\Users\anaha\source\repos\King-Anaharishon-a1-Rpg\King-Anaharishon-a1-Rpg\obj\Debug\net10.0\King-Anaharishon-a1-Rpg.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\anaha\source\repos\King-Anaharishon-a1-Rpg\King-Anaharishon-a1-Rpg\obj\Debug\net10.0\King-Anaharishon-a1-Rpg.AssemblyInfoInputs.cache
+C:\Users\anaha\source\repos\King-Anaharishon-a1-Rpg\King-Anaharishon-a1-Rpg\obj\Debug\net10.0\King-Anaharishon-a1-Rpg.AssemblyInfo.cs
+C:\Users\anaha\source\repos\King-Anaharishon-a1-Rpg\King-Anaharishon-a1-Rpg\obj\Debug\net10.0\King-Anaharishon-a1-Rpg.csproj.CoreCompileInputs.cache
+C:\Users\anaha\source\repos\King-Anaharishon-a1-Rpg\King-Anaharishon-a1-Rpg\obj\Debug\net10.0\King-Anaharishon-a1-Rpg.dll
+C:\Users\anaha\source\repos\King-Anaharishon-a1-Rpg\King-Anaharishon-a1-Rpg\obj\Debug\net10.0\refint\King-Anaharishon-a1-Rpg.dll
+C:\Users\anaha\source\repos\King-Anaharishon-a1-Rpg\King-Anaharishon-a1-Rpg\obj\Debug\net10.0\King-Anaharishon-a1-Rpg.pdb
+C:\Users\anaha\source\repos\King-Anaharishon-a1-Rpg\King-Anaharishon-a1-Rpg\obj\Debug\net10.0\King-Anaharishon-a1-Rpg.genruntimeconfig.cache
+C:\Users\anaha\source\repos\King-Anaharishon-a1-Rpg\King-Anaharishon-a1-Rpg\obj\Debug\net10.0\ref\King-Anaharishon-a1-Rpg.dll

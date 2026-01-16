@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "King-Anaharishon-a1-Rpg/1.0.0": {
+        "runtime": {
+          "King-Anaharishon-a1-Rpg.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "King-Anaharishon-a1-Rpg/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
