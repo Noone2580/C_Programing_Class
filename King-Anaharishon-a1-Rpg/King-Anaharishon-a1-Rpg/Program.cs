@@ -1,4 +1,6 @@
 ﻿
+StartGame:
+
 string Name = "Unknown";
 
 string Acttion;
@@ -15,18 +17,21 @@ Console.WriteLine("Use Help! To see a list of Actions. And Use Stats! To see all
 Console.WriteLine();
 Console.WriteLine();
 
-Console.WriteLine("It's dark... And cold \nYour Head hurts....");
-
 YourName:
+Console.WriteLine("It's dark... And cold \nYour Head hurts....");
 Console.WriteLine("Do you Remenber your Name?");
 Name = Console.ReadLine();
 
 
-if (Name.Contains("help") ^ Name.Contains("Help!"))
-    Console.WriteLine("Write Name\n");
+if (Name.Contains("Help!"))
+{
+    Console.WriteLine("\nWrite your Name\n");
+    goto YourName;
+}
 else
 
-    Console.WriteLine("It's " + Name + "? You think to yourself unsure if it's your name or not");
+Console.Clear();
+Console.WriteLine("It's " + Name + "? You think to yourself unsure if it's your name or not");
 Console.WriteLine();
 Console.WriteLine();
 Console.WriteLine();
