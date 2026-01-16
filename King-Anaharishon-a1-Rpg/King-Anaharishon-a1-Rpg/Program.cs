@@ -43,8 +43,10 @@ Acttion = Acttion.ToLower();
 Console.WriteLine();
 
 if (Acttion.Contains("y") ^ Acttion.Contains("open"))
+{
     Console.Clear();
     Console.WriteLine("All you see is white for a few seconds... You see a small red room...\n");
+}
 else
     goto OpenEyes;
 
