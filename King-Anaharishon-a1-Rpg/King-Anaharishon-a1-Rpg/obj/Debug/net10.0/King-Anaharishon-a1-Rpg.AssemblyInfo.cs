@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("King-Anaharishon-a1-Rpg")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eac2584ffca87c4c6c843086644674109f5bd4e0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9d47e4640cd6d93c9d7a4a07256451a0b305be78")]
 [assembly: System.Reflection.AssemblyProductAttribute("King-Anaharishon-a1-Rpg")]
 [assembly: System.Reflection.AssemblyTitleAttribute("King-Anaharishon-a1-Rpg")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

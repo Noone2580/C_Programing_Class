@@ -7,7 +7,7 @@ using System.Security.AccessControl;
 using System.Security.Claims;
 using static System.Net.Mime.MediaTypeNames;
 
-StartGame:
+GameStart:
 
 string HelpInfo = "\n\nUse \"Look\" And than an objects name to inspect it\n-Around to get a list of all interactable objects.\n\nType\"Use\" Then the name of the object to Interact with it.\n";
 
@@ -41,7 +41,7 @@ if (Name.Contains("Help!"))
 }
 else
 
-Console.Clear();
+    Console.Clear();
 Console.WriteLine("It's " + Name + "? You think to Yourself unsure if it's Your name or not");
 Console.WriteLine("\n\n");
 
@@ -66,7 +66,7 @@ else
 
 Room:
 if (Spot == 0)
-Console.WriteLine("You get off the bed You where Laying on and move to the center of the room.");
+    Console.WriteLine("You get off the bed You where Laying on and move to the center of the room.");
 
 Spot = 1;
 Console.WriteLine("To You're right is some kind of Terminal and what looks like a needle is attached to the right of the it. \nTo You're left theres a window and a chair with someone slumped over.To the right of the Chair theres a Valve with a Label on it.\nIn front of You theres what looks to be a Vendding Machine and a Door.");
@@ -83,8 +83,8 @@ if (Acttion.Contains("Help!"))
     goto Room;
 }
 else
- 
-Acttion = Acttion.ToLower();
+
+    Acttion = Acttion.ToLower();
 
 
 if (Acttion.Contains("go"))
@@ -96,7 +96,7 @@ if (Acttion.Contains("go"))
         Console.Clear();
         goto Left;
     }
-        
+
     if (Acttion.Contains("forword"))
         goto Forword;
     if (Acttion.Contains("back"))
@@ -119,23 +119,23 @@ if (Acttion.Contains("Help!"))
 }
 else
 
-Acttion = Acttion.ToLower();
+    Acttion = Acttion.ToLower();
 
 
 if (Acttion.Contains("go"))
 {
     if (Acttion.Contains("back"))
-    goto Back;
+        goto Back;
     else goto Bed;
 }
 else
 
 if (Acttion.Contains("look"))
 {
-    if (Acttion.Contains("around")) 
+    if (Acttion.Contains("around"))
     {
         Console.WriteLine("Youre laying on a Gray bed. At Youre feet theres a Box\n");
-        goto Bed; 
+        goto Bed;
     }
     if (Acttion.Contains("box"))
     {
@@ -144,7 +144,7 @@ if (Acttion.Contains("look"))
     }
     else goto Bed;
 }
-else 
+else
 
 if (Acttion.Contains("use"))
 {
@@ -183,7 +183,7 @@ if (Acttion.Contains("Help!"))
 }
 else
 
-Acttion = Acttion.ToLower();
+    Acttion = Acttion.ToLower();
 
 
 if (Acttion.Contains("go"))
@@ -224,7 +224,7 @@ else
 if (Acttion.Contains("use"))
 {
     if (Acttion.Contains("window"))
-{
+    {
         Console.WriteLine("it Does't open");
         goto Left;
     }
