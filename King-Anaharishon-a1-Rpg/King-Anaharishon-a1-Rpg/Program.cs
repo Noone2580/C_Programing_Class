@@ -675,9 +675,86 @@ if (Acttion.Contains("use"))
             else
             {
                 Console.Clear();
+                Console.WriteLine(
+                    "-------|----------------------------------|-------\n" +
+                    "|      |*################################*|      |\n" +
+                    "|      |*######### ############### ######*|      |\n" +
+                    "|      |*################################*|      |\n" +
+                    "|      |*################   #############*|      |\n" +
+                    "|      |*####### ############### ########*|      |\n" +
+                    "|------|*################## #############*|------|\n" +
+                    "|      |*##### ###### ## ######### ### ##*|      |\n" +
+                    "|------|*######################### ######*|------|\n" +
+                    "|      |*##### ###### ##### #############*|      |\n" +
+                    "|------|*######### ######################*|------|\n" +
+                    "|      |*######### ######## #############*|      |\n" +
+                    "|      |*################################*|      |\n" +
+                    "|      |*###### ################## ######*|      |\n" +
+                    "|      |*######### ######################*|      |\n" +
+                    "|      |*################################*|      |\n" +
+                    "|      |*####    ##  ##  ####            *|      |\n" +
+                    "|      |*                                *|      |\n" +
+                    "|      |**********************************|      |\n" +
+                    "-------|/________________________________\\|-------\n" +
+                    "                                                  \n");
+
                 Console.WriteLine("You open the Door and get hit by a large gust of freezing wind and snow.\nIt's dark outside and you can't see far\nYou look back into the room. seeing that You have nothing else to do then to move forword");
+                Console.ReadLine();
+
+                Console.Clear();
+                Console.WriteLine(
+                    "--------------------------------------------------\n" +
+                    "|                                                |\n" +
+                    "|                                                |\n" +
+                    "|                                                |\n" +
+                    "|                                                |\n" +
+                    "|                                                |\n" +
+                    "|                                                |\n" +
+                    "|                                                |\n" +
+                    "|                                                |\n" +
+                    "|                                                |\n" +
+                    "|                                                |\n" +
+                    "|                                                |\n" +
+                    "|                                                |\n" +
+                    "|                                                |\n" +
+                    "|                                                |\n" +
+                    "|                                                |\n" +
+                    "|                                                |\n" +
+                    "|                                                |\n" +
+                    "|                                                |\n" +
+                    "--------------------------------------------------\n" +
+                    "                                                  \n");
                 Console.WriteLine("You step outside and start walking when you hear the door close behide You\nYou walk for a while... You see nothing but darkness and snow...");
                 Console.WriteLine("As You are walking a large gust hits You and You hear someing metal breaking in the distance\nAll of a suddon You get hit in the back of the head by something You can's see. You fall to the ground...");
+                Console.ReadLine();
+
+                Console.Clear(); 
+                Console.WriteLine(
+                    "--------------------------------------------------\n" +
+                    "|                                                |\n" +
+                    "|                   ___________                  |\n" +
+                    "|                   [ ICE BOX ]                  |\n" +
+                    "|                   |---------|                  |\n" +
+                    "|                   |         |                  |\n" +
+                    "|                   |_________|                  |\n" +
+                    "|                                                |\n" +
+                    "|             #  A TERMINAL GAME BY  #           |\n" +
+                    "|              %  ANAHARISHON KING  %            |\n" +
+                    "|                                                |\n" +
+                    "|                                                |\n" +
+                    "|                                                |\n" +
+                    "|                                                |\n" +
+                    "|                                                |\n" +
+                    "|              ^ THANKS FOR PLAYING ^            |\n" +
+                    "|                                                |\n" +
+                    "|                                                |\n" +
+                    "|                                                |\n" +
+                    "--------------------------------------------------\n" +
+                    "                                                  \n");
+                Console.ReadLine();
+                Console.Clear();
+                goto GameStart;
+
             }
         }
         else
@@ -689,13 +766,20 @@ if (Acttion.Contains("use"))
     }
     if (Acttion.Contains("vendding") || Acttion.Contains("machine") )
     {
-        goto Vendding;
+        if (Water)
+            goto Vendding;
+        else
+        {
+            Console.WriteLine("It has no Power");
+            goto Forword;
+        }
     }
 }
 
 
 Vendding:
 string rcs = "Row";
+Console.WriteLine("The Gear is on Row 2, Col 4.");
 Console.WriteLine($"Row: {Row}, Col: {Col}");
 if (RC)
 {
@@ -711,7 +795,7 @@ Acttion = Console.ReadLine();
 if (Acttion.Contains("Help!"))
 {
     Console.Clear();
-    Console.WriteLine("Type \"Go Back\" to leave the vendding machine. Type \"Row\" or \"Col\" so change the number");
+    Console.WriteLine("Type \"Go Back\" to leave the vendding machine. Type \"Row\" or \"Col\" so change the number. Type Enter to finish ");
     goto Vendding;
 }
 
@@ -734,12 +818,43 @@ if (Acttion.Contains("row") || Acttion.Contains("col"))
 }
 if (Acttion.Contains("3") || Acttion.Contains("5") || Acttion.Contains("9"))
 {
-
+    int Vent = int.Parse(Acttion);
+    if (RC)
+    {
+        Row = Row + Vent;
+        Console.WriteLine($"{rcs}: {Row}");
+        goto Vendding;
+    }
+    else
+    {
+        Col = Col + Vent;
+        Console.WriteLine($"{rcs}: {Col}");
+        goto Vendding;
+    }
 }
-else 
+
+if (Acttion.Contains("enter"))
+{
+    if (Row == 2 && Col == 4)
+    {
+        Gear = true;
+        Console.WriteLine("The Gear drops to the buttom with a loud bang. You pick it up and put it into the door");
+        goto Forword;
+    }
+    else
+    {
+        Console.WriteLine("Nothing happens");
+        goto Vendding;
+    }
+}
+
+if (Acttion.Contains("go") || Acttion.Contains("back"))
+    goto Forword;
+
+else
 {
     Console.Clear();
-    goto Vendding; 
+    goto Vendding;
 }
 
 
