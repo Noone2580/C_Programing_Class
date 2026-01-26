@@ -673,7 +673,7 @@ if (Acttion.Contains("use"))
                 goto Forword;
             }
             else
-            {
+            {// End Game
                 Console.Clear();
                 Console.WriteLine(
                     "-------|----------------------------------|-------\n" +
