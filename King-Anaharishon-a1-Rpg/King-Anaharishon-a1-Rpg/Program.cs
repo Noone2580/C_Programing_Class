@@ -57,7 +57,7 @@ if (Name.Contains("Help!"))
 else
 
     Console.Clear();
-Console.WriteLine("It's " + Name + "? You think to Yourself unsure if it's Your name or not");
+Console.WriteLine($"It's {Name}? You think to Yourself unsure if it's Your name or not");
 Console.WriteLine("\n\n");
 
 
@@ -118,7 +118,7 @@ Console.WriteLine();
 
 if (Acttion.Contains("Help!"))
 {
-    Console.WriteLine("\nUse \"Go\" And Then a direction to move\n-Left\n-Right\n-Forward\n-Back \n" + HelpInfo);
+    Console.WriteLine($"\nUse \"Go\" And Then a direction to move\n-Left\n-Right\n-Forward\n-Back \n{HelpInfo}");
     goto Room;
 }
 else
@@ -187,7 +187,7 @@ Console.WriteLine();
 
 if (Acttion.Contains("Help!"))
 {
-    Console.WriteLine("\nUse \"Go\" And Then a direction to move\n-Back \n" + HelpInfo);
+    Console.WriteLine($"\nUse \"Go\" And Then a direction to move\n-Back \n{HelpInfo}");
     goto Bed;
 }
 else
@@ -275,7 +275,7 @@ Console.WriteLine();
 
 if (Acttion.Contains("Help!"))
 {
-    Console.WriteLine("\nUse \"Go\" And Then a direction to move\n-Back \n" + HelpInfo);
+    Console.WriteLine($"\nUse \"Go\" And Then a direction to move\n-Back \n{HelpInfo}");
     goto Right;
 }
 else
@@ -502,7 +502,7 @@ if (Acttion.Contains("look"))
     }
     if (Acttion.Contains("body"))
     {
-        Console.WriteLine("They are wearing a Orange winter jacket with a name tag that reads " + Name + "\nResearch and Developnent\n");
+        Console.WriteLine($"They are wearing a Orange winter jacket with a name tag that reads.\n\"{Name} Research and Developnent\"\n");
         goto Left;
     }
     else goto Left;
@@ -619,7 +619,7 @@ Acttion = Console.ReadLine();
 if (Acttion.Contains("Help!"))
 {
     Console.Clear();
-    Console.WriteLine("\nUse \"Go\" And Then a direction to move\n-Back \n" + HelpInfo);
+    Console.WriteLine($"\nUse \"Go\" And Then a direction to move\n-Back \n{HelpInfo}");
     goto Forward;
 }
 Acttion = Acttion.ToLower();
@@ -920,7 +920,7 @@ if (Acttion.Contains("row") || Acttion.Contains("col"))
     }
 }
 if (Acttion.Contains("3") || Acttion.Contains("5") || Acttion.Contains("9"))
-{
+{ 
     int Vent = int.Parse(Acttion);
     if (RC)
     {
