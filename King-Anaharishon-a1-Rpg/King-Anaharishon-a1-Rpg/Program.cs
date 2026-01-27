@@ -38,7 +38,7 @@ bool Box = false;
 bool RC = true;
 
 
-Console.WriteLine("Use Help! To see a list of Actions.");
+Console.WriteLine("Use \"Help!\" To see a list of Actions.");
 Console.WriteLine("\n");
 
 YourName:
@@ -118,7 +118,7 @@ Console.WriteLine();
 
 if (Acttion.Contains("Help!"))
 {
-    Console.WriteLine("\nUse \"Go\" And Then a direction to move\n-Left\n-Right\n-Forword\n-Back \n" + HelpInfo);
+    Console.WriteLine("\nUse \"Go\" And Then a direction to move\n-Left\n-Right\n-Forward\n-Back \n" + HelpInfo);
     goto Room;
 }
 else
@@ -140,10 +140,10 @@ if (Acttion.Contains("go"))
         goto Left;
     }
 
-    if (Acttion.Contains("forword"))
+    if (Acttion.Contains("forward"))
     {
         Console.Clear();
-        goto Forword;
+        goto Forward;
 
     }
     if (Acttion.Contains("back"))
@@ -233,7 +233,7 @@ if (Acttion.Contains("use"))
     }
     else goto Bed;
 }
-
+else goto Bed;
 
 
 
@@ -326,6 +326,8 @@ if (Acttion.Contains("use"))
         }
     }
 }
+else
+    goto Right;
 
 //This is the Terminal it has it's own code because it will break other wase.
 Terminal:
@@ -344,11 +346,21 @@ if (Password)
             Console.WriteLine("Access granted");
             Password = false;
         }
+        if (Acttion.Contains("go") || Acttion.Contains("back"))
+        {
+            Console.Clear();
+            goto Right;
+        }
         else
         {
             Console.Clear();
             goto Terminal;
         }
+    }
+    if (Acttion.Contains("go") || Acttion.Contains("back"))
+    {
+        Console.Clear();
+        goto Right;
     }
     else
     {
@@ -570,10 +582,11 @@ if (Acttion.Contains("use"))
         else goto Left;
     }
 }
+else goto Left;
 
-Forword:
+Forward:
 if (Spot != 4)
-    Console.WriteLine("You walk forword to the Door");
+    Console.WriteLine("You walk Forward to the Door");
 Spot = 4;
 
 if (Notebook)
@@ -607,7 +620,7 @@ if (Acttion.Contains("Help!"))
 {
     Console.Clear();
     Console.WriteLine("\nUse \"Go\" And Then a direction to move\n-Back \n" + HelpInfo);
-    goto Forword;
+    goto Forward;
 }
 Acttion = Acttion.ToLower();
 
@@ -624,7 +637,7 @@ if (Acttion.Contains("look"))
     {
         Console.Clear();
         Console.WriteLine("In front of You see the only Door in the room to the left there is a Vendding Machine");
-        goto Forword;
+        goto Forward;
     }
     if (Acttion.Contains("door"))
     {
@@ -632,13 +645,13 @@ if (Acttion.Contains("look"))
         {
             Console.Clear();
             Console.WriteLine("It's a big Red Door with a mechanical lock and some lights");
-            goto Forword;
+            goto Forward;
         }
         else
         {
             Console.Clear();
             Console.WriteLine("It's a big Red Door with a mechanical lock");
-            goto Forword;
+            goto Forward;
         }
     }
     if (Acttion.Contains("vendding") || Acttion.Contains("machine"))
@@ -647,13 +660,13 @@ if (Acttion.Contains("look"))
         {
             Console.Clear();
             Console.WriteLine("You look into the Vendding Machine and see a Gear on the hook row 2 col 4");
-            goto Forword;
+            goto Forward;
         }
         else 
         {
             Console.Clear();
             Console.WriteLine("You can't see into the Vendding Machine there is a shutter door in the way. There is text on the door that reads \"All buttons don't work except for 3, 5, 9\nTo get someing type in - or + then the number\"");
-            goto Forword;
+            goto Forward;
         }
             
         
@@ -670,7 +683,7 @@ if (Acttion.Contains("use"))
             {
                 Console.Clear();
                 Console.WriteLine("It's Locked");
-                goto Forword;
+                goto Forward;
             }
             else
             {// End Game
@@ -698,7 +711,7 @@ if (Acttion.Contains("use"))
                     "-------|/________________________________\\|-------\n" +
                     "                                                  \n");
 
-                Console.WriteLine("You open the Door and get hit by a large gust of freezing wind and snow.\nIt's dark outside and you can't see far\nYou look back into the room. seeing that You have nothing else to do then to move forword");
+                Console.WriteLine("You open the Door and get hit by a large gust of freezing wind and snow.\nIt's dark outside and you can't see far\nYou look back into the room. seeing that You have nothing else to do then to move Forward");
                 Console.ReadLine();
 
                 Console.Clear();
@@ -753,6 +766,91 @@ if (Acttion.Contains("use"))
                     "                                                  \n");
                 Console.ReadLine();
                 Console.Clear();
+
+                Console.WriteLine(
+                    "--------------------------------------------------\n" +
+                    "|   /       /         /              /        /  |\n" +
+                    "|      /            /    /     /                 |\n" +
+                    "|             //          /          ///         |\n" +
+                    "|  /  /       //        /                   /    |\n" +
+                    "|     /           /         /    /   /           |\n" +
+                    "|        /   /        *******            /   //  |\n" +
+                    "|                     *#####*                    |\n" +
+                    "|     /        /      *#####* /       /  /       |\n" +
+                    "|   /                 *#####*                    |\n" +
+                    "|        /    /   /   *******  /    //     //    |\n" +
+                    "|     /                /                         |\n" +
+                    "|_________----_---_  / _--__---------_    /  _---|\n" +
+                    "|##################--_-###############---__--####|\n" +
+                    "|################################################|\n" +
+                    "|################################################|\n" +
+                    "|################################################|\n" +
+                    "|################################################|\n" +
+                    "|################################################|\n" +
+                    "--------------------------------------------------\n" +
+                    "                                                  \n");
+
+                Console.WriteLine("You see a light in the distance.... You get up Your head is spining.\nYou move forward.");
+                Console.ReadLine();
+
+                Console.Clear();
+
+                Console.WriteLine(
+                    "----------------------------------|---------------\n" +
+                    "|             /       /    /      |      /      /|\n" +
+                    "|     /                        /  |           /  |\n" +
+                    "|  /     /      /   /    /        |      /      /|\n" +
+                    "|                              /  |              |\n" +
+                    "|  /    ___----\\                  |      /    /  |\n" +
+                    "|      /         \\         /  /   |              |\n" +
+                    "|     /   /  /    |  /            |              |\n" +
+                    "|     |     /     |               |      /    /  |\n" +
+                    "|     |    /      |   /       /   |              |\n" +
+                    "|  /  |      /   /                |             /|\n" +
+                    "|     \\        /        /         |              |\n" +
+                    "|        \\__---    /              |    /    /    |\n" +
+                    "|                 /           /   |              |\n" +
+                    "|  /                   /         _|   /         /|\n" +
+                    "|       /   /    /          _  - _|      /    /  |\n" +
+                    "|                      _  - _  - |               |\n" +
+                    "|                _  -  _  -    |_|  /    /      /|\n" +
+                    "|    /     _  -  _  -       /                 /  |\n" +
+                    "--------------------------------------------------\n" +
+                    "                                                  \n");
+
+                Console.WriteLine("You find a samll buliding. The light is coming from the Window. ");
+                Console.ReadLine();
+
+                Console.Clear();
+
+
+                Console.WriteLine(
+                    "-------|----------------------------------|-------\n" +
+                    "|      |*################################*|      |\n" +
+                    "|      |*######### ############### ######*|      |\n" +
+                    "|      |*################################*|      |\n" +
+                    "|      |*################   #############*|      |\n" +
+                    "|      |*####### ############### ########*|      |\n" +
+                    "|------|*################## #############*|------|\n" +
+                    "|      |*##### ###### ## ######### ### ##*|      |\n" +
+                    "|------|*######################### ######*|------|\n" +
+                    "|      |*##### ###### ##### #############*|      |\n" +
+                    "|------|*######### ######################*|------|\n" +
+                    "|      |*######### ######## #############*|      |\n" +
+                    "|      |*################################*|      |\n" +
+                    "|      |*###### ################## ######*|      |\n" +
+                    "|      |*######### ######################*|      |\n" +
+                    "|      |*################################*|      |\n" +
+                    "|      |*####    ##  ##  ####        ####*|      |\n" +
+                    "|      |*                      ###       *|      |\n" +
+                    "|      |**********************************|      |\n" +
+                    "-------|/________________________________\\|-------\n" +
+                    "                                                  \n");
+                Console.WriteLine("You find a Door and go inside. Your head is still spining. It's not just Your head \"The world is Spining!\" You think to Yourself.\nYou hit a chair and sit down... \"I Just Need a rest\" You think to Yourself.");
+                Console.WriteLine("\nYou close your eyes.");
+                Console.ReadLine();
+
+                Console.Clear();
                 goto GameStart;
 
             }
@@ -761,7 +859,7 @@ if (Acttion.Contains("use"))
         {
             Console.Clear();
             Console.WriteLine("A Part is missing in the lock");
-            goto Forword;
+            goto Forward;
         }
     }
     if (Acttion.Contains("vendding") || Acttion.Contains("machine") )
@@ -771,9 +869,14 @@ if (Acttion.Contains("use"))
         else
         {
             Console.WriteLine("It has no Power");
-            goto Forword;
+            goto Forward;
         }
     }
+}
+else
+{
+    Console.Clear();
+    goto Forward;
 }
 
 
@@ -839,7 +942,7 @@ if (Acttion.Contains("enter"))
     {
         Gear = true;
         Console.WriteLine("The Gear drops to the buttom with a loud bang. You pick it up and put it into the door");
-        goto Forword;
+        goto Forward;
     }
     else
     {
@@ -849,7 +952,7 @@ if (Acttion.Contains("enter"))
 }
 
 if (Acttion.Contains("go") || Acttion.Contains("back"))
-    goto Forword;
+    goto Forward;
 
 else
 {
