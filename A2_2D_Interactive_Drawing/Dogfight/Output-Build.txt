@@ -1,0 +1,8 @@
+﻿Build started at 10:50 PM...
+1>------ Build started: Project: Lady Bacon (Challenge), Configuration: Debug Any CPU ------
+1>  Skipping analyzers to speed up the build. You can execute 'Build' or 'Rebuild' command to run analyzers.
+1>C:\Users\anaha\OneDrive\Documents\ProgramingClass\Lady Bacon (Challenge)\Game.cs(39,11,39,13): warning CS0414: The field 'Game.EE' is assigned but its value is never used
+1>C:\Users\anaha\OneDrive\Documents\ProgramingClass\Lady Bacon (Challenge)\Game.cs(17,9,17,20): warning CS0414: The field 'Game.ShadowIndex' is assigned but its value is never used
+1>  Lady Bacon (Challenge) -> C:\Users\anaha\OneDrive\Documents\ProgramingClass\Lady Bacon (Challenge)\bin\Debug\.net10.0\Lady Bacon (Challenge).dll
+========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
+========== Build completed at 10:50 PM and took 00.423 seconds ==========

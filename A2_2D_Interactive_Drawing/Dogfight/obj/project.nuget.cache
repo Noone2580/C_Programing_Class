@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "S4MSw9TCe1g=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\anaha\\OneDrive\\Documents\\ProgramingClass\\Dogfight\\Dogfight.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\anaha\\.nuget\\packages\\raylib-cs\\6.1.1\\raylib-cs.6.1.1.nupkg.sha512"
+  ],
+  "logs": []
+}
