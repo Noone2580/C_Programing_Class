@@ -73,11 +73,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\anaha\\OneDrive\\Documents\\ProgramingClass\\Dogfight\\Dogfight.csproj",
+      "projectUniqueName": "C:\\Users\\anaha\\source\\repos\\C_Programing_Class\\A2_2D_Interactive_Drawing\\Dogfight\\Dogfight.csproj",
       "projectName": "MohawkGame10003.2DGameTemplate",
-      "projectPath": "C:\\Users\\anaha\\OneDrive\\Documents\\ProgramingClass\\Dogfight\\Dogfight.csproj",
+      "projectPath": "C:\\Users\\anaha\\source\\repos\\C_Programing_Class\\A2_2D_Interactive_Drawing\\Dogfight\\Dogfight.csproj",
       "packagesPath": "C:\\Users\\anaha\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\anaha\\OneDrive\\Documents\\ProgramingClass\\Dogfight\\obj\\",
+      "outputPath": "C:\\Users\\anaha\\source\\repos\\C_Programing_Class\\A2_2D_Interactive_Drawing\\Dogfight\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -138,7 +138,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.CSharp": "(,4.7.32767]",
           "Microsoft.VisualBasic": "(,10.4.32767]",

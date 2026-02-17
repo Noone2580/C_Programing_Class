@@ -6,6 +6,7 @@ using System.Numerics;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.Intrinsics.X86;
+using System.Security.Principal;
 using System.Threading;
 
 // The namespace your code is in.
@@ -48,6 +49,8 @@ public class Game
 
     int MenuHP = 10;
 
+    float LifeTime = 0;
+
     // Number of times the player can fire per secent
     int FireRate = 60 / 10; // 60 is the Frame Rate.
     int FireCount = 0;
@@ -68,6 +71,11 @@ public class Game
 
     void MainMenu()// Draws the Main Menu
     {
+        Lives = 3;
+
+        Console.Clear();
+        Console.WriteLine($"You Survived {LifeTime} Seconds");
+
         PlayerX = Input.GetMouseX();
         PlayerY = Input.GetMouseY();
 
@@ -84,32 +92,61 @@ public class Game
         Draw.FillColor = Color.DarkGray;
         Draw.Capsule(new Vector2(400, 200), new Vector2(400, 230), 10);
 
-        // Dis cal
-        float DisX = Window.Width / 2 - PlayerX;
-        float DisY = Window.Height / 2 - PlayerY;
-
-        // If DisX is nagtive
-        if (DisX < 0)
+        for (int i = 0; i < EnemyCoords.Length; i++) 
         {
-            DisX = DisX * -1;
+            EnemyCoords[i] = new Vector4();
         }
 
-        // If DisY is nagtive
-        if (DisY < 0)
-        {
-            DisY = DisY * -1;
-        }
-
-        float Dis = DisX + DisY;
-
-        // Draw Button
-
+        // Draw Target
+        float TarR = 100;
         for (int i = 0; i < MenuHP; i++)
         {
-            
+            float M = ((float)MenuHP);
 
-            Draw.FillColor = Color.White;
-            Draw.Circle(Window.Width / 2, Window.Height / 2, i * 5);
+            float R = TarR * (M - i) / 10f;
+
+            if (i % 2 == 0)
+                Draw.FillColor = Color.Red;
+
+            else Draw.FillColor = Color.White;
+
+            Draw.Circle(700, 400, R);
+
+            for (int c = 0; c < BulletCoords.Length; c++)
+            {
+                // Dis cal
+                float DisX = BulletCoords[c].X - 700;
+                float DisY = BulletCoords[c].Y - 400;
+
+                // If DisX is nagtive
+                if (DisX < 0)
+                {
+                    DisX = DisX * -1;
+                }
+
+                // If DisY is nagtive
+                if (DisY < 0)
+                {
+                    DisY = DisY * -1;
+                }
+
+                float Dis = DisX + DisY;
+
+                // Check if hitting Target
+                if (Dis <= R * 2)
+                {
+                    MenuHP--;
+
+                    BulletCoords[c] = new Vector3(0, 0, 0);
+                }
+
+            }
+
+            if (MenuHP <= 0)
+            {
+                LifeTime = 0;
+                GameState = 1;
+            }
         }
 
         // Goes through all Bullets and Draws them
@@ -150,6 +187,9 @@ public class Game
 
     bool CalTiggerPerSec(int Rate, int CurrentFrame)
     {
+        if (Rate <= 0)
+            return false;
+
         int FKf = 60 / Rate - 1;
         bool Can = false;
 
@@ -328,9 +368,7 @@ public class Game
             EnemyCoords[index] = new Vector4(810, Random.Float(0, 600), 99, Random.Integer(0, MaxEnemyTypes));
         else
             EnemyCoords[index] = new Vector4(810, Random.Float(0, 600), 99, EnemyType);
-
     }
-
 
     // Draws Enemy at Location
     void DrawEnemy(int ArrayIndex)
@@ -343,7 +381,6 @@ public class Game
             EnemyCoords[ArrayIndex] = new Vector4(0, 0, 0, 0);
             return;
         }
-
 
         if (EnemyType == 0)// Base Enemy that only moves stright. Copy and Paste to make a new enemy.
         {
@@ -413,8 +450,6 @@ public class Game
             if (EnemyCoords[ArrayIndex].Z > HP)
                 // Then clamp it to HP
                 EnemyCoords[ArrayIndex] = new Vector4(EnemyCoords[ArrayIndex].X, EnemyCoords[ArrayIndex].Y, HP, EnemyCoords[ArrayIndex].W);
-
-
 
             // Draw Color and Enemy
             Draw.FillColor = Color.Yellow;
@@ -490,8 +525,6 @@ public class Game
                 // Then clamp it to HP
                 EnemyCoords[ArrayIndex] = new Vector4(EnemyCoords[ArrayIndex].X, EnemyCoords[ArrayIndex].Y, HP, EnemyCoords[ArrayIndex].W);
 
-
-
             // Draw Color and Enemy
             Draw.FillColor = Color.Cyan;
             Draw.Circle(EnemyCoords[ArrayIndex].X, EnemyCoords[ArrayIndex].Y, Size);
@@ -561,6 +594,12 @@ public class Game
         // Reset screen
         Window.ClearBackground(BackgroundColor);
 
+        if (Lives <= 0)
+        {
+            MenuHP = 10;
+            GameState = 0;
+        }
+
         if (GameState == 0)
         {
             MainMenu();
@@ -597,11 +636,12 @@ public class Game
             }
 
             // Evey set number of frames spawn a enemy.
-            if (CalTiggerPerSec(5, FC))
+            int CC = ((int)LifeTime / 5);
+
+            if (CalTiggerPerSec( CC , FC))
             {
                 // Spawns a random enemy.
                 SpawnEnemy(true, 0);
-
             }
 
             // Goes through all Bullets and Draws them
@@ -613,8 +653,6 @@ public class Game
                     // Then Draw
                     DrawBullet(i);
                 }
-
-
             }
 
             // Goes through all enemys and Draws them
@@ -626,8 +664,6 @@ public class Game
                     // Then Draw
                     DrawEnemy(i);
                 }
-
-
             }
 
             // Draw Player Lives
@@ -640,8 +676,8 @@ public class Game
                 Draw.Circle(30 * i, 10, PlayerSize);
 
             }
-
-
+            Console.Clear();
+            Console.WriteLine($"Current Time {LifeTime}");
 
         }
 
@@ -650,6 +686,11 @@ public class Game
         if (FC >= 60)
         {
             FC = 0;
+            if (GameState == 1)
+                LifeTime++;
+
         }
+
+        
     }
 }
