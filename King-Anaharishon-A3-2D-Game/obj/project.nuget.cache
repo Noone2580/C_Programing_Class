@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "0bGdNC3fxhY=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\anaha\\OneDrive\\Documents\\ProgramingClass\\GAME.10003.Game.Development.Foundations.-.2D.Game.Template.v1.5\\GAME 10003 Game Development Foundations - 2D Game Template.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\anaha\\.nuget\\packages\\raylib-cs\\7.0.1\\raylib-cs.7.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
